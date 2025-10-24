@@ -1,0 +1,5 @@
+Flask
+
+# Si la implementación usa Django REST Framework o librerías adicionales,
+# agrégalas aquí, por ejemplo:
+# djangorestframework
