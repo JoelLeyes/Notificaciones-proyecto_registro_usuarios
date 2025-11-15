@@ -7,8 +7,9 @@ WORKDIR /app
 # Copia los archivos del microservicio al contenedor
 COPY . /app
 
-# Instala las dependencias necesarias
-RUN pip install --no-cache-dir -r requirements.txt
+# Actualiza pip a versión segura y luego instala dependencias
+RUN pip install --no-cache-dir --upgrade pip==25.3 && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Expone el puerto en el que corre Flask
 EXPOSE 5001
